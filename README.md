@@ -1,3 +1,5 @@
+# WORK IN PROGRESS
+
 # auto-newsletter-signup
 Python program that auto signs up a given email to a bunch of newsletter services
 
