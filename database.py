@@ -8,7 +8,7 @@ data = {
 #guardian
 0 :	{
   "name" : "guardian",
-  "type" : 1,
+  "type" : "get",
  	"url" : "https://mc.us10.list-manage.com/subscribe/form-post-json",
   "payload": {
     'u': '7e6df2d1155a77e28a5ba530a',
@@ -24,7 +24,7 @@ data = {
 #peta
 1 :	{
   "name" : "peta",
-  "type" : 2,
+  "type" : "post",
 	"url" : "https://www.peta.org.au/wp-admin/admin-ajax.php",
   "payload": {
     'supporter.emailAddress': "testing@icloud.com",
@@ -46,7 +46,7 @@ data = {
 #scientology
 2 :	{
   "name" : "scientology",
-  "type" : 2,
+  "type" : "post",
 	"url" : "https://www.scientology.org.au/form/subscribe.action",
   "payload": {
     'captcha': 'V@3fsasdfasdfAAdgf9J*',
@@ -58,7 +58,7 @@ data = {
 #abc
 3 : {
   "name" : "abc",
-  "type" : 3,
+  "type" : "post_json",
   "url"  : 'https://edm.abc-prod.net.au/latest/subscribe',
   
 }
