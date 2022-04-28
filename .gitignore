@@ -154,4 +154,4 @@ cython_debug/
 
 #my testing crap
 
-.testing_from_database.py
+testing_from_database.py
