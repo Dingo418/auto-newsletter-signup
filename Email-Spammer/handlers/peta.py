@@ -1,4 +1,9 @@
 import requests
+def inf():
+    return {
+        "name": "PETA"
+    }
+
 def send(email, fName, lName):
     url = "https://www.peta.org.au/wp-admin/admin-ajax.php"
     payload = {
@@ -18,10 +23,7 @@ def send(email, fName, lName):
         'pma_template': 'subscription_form',
         'action': 'ens_submit_subscription_form'
     }
-    push = requests.post(url=url, params=payload)
-    print(f"{email} was succesfully subscribed to PETA Newsletter")
-#    print(push.text)
-    
-
+    res = requests.post(url=url, params=payload)
+    return res.ok
     
         

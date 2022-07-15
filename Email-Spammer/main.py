@@ -1,15 +1,23 @@
 #!/usr/bin/python
-import requests
+from importlib import import_module
 from argparse import ArgumentParser
+import os
 from handlers import *
 
 def destroy(email, fName, lName):
     print(f"Destroying {email}")
-    guardian.send(email, fName, lName)
-    peta.send(email, fName, lName)
-    
-
-    
+    for file in os.listdir('handlers'):
+        if file.endswith('.py'):
+            try:
+                handler = import_module(f'handlers.{file[:-3]}')
+                res = handler.send(email, fName, lName)
+                if res:
+                  print(f"Signed up to {handler.inf()['name']}")
+                else:
+                  print(f"Failed to sign up to {handler.inf()['name']}")
+            except Exception as e:
+                print('Error while signing up: ')
+                print(e)
 
 def main():
     parser = ArgumentParser(description="TESTING for email spammer")
