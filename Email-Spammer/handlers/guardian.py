@@ -17,4 +17,5 @@ def send(email, fName, lName):
         'c': 'dojo_request_script_callbacks.dojo_request_script1',
     }
     res = requests.get(url=url, params=payload)
+    print(res.text)
     return res.ok

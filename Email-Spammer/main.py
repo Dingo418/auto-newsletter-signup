@@ -2,7 +2,6 @@
 from importlib import import_module
 from argparse import ArgumentParser
 import os
-from handlers import *
 
 def destroy(email, fName, lName):
     print(f"Destroying {email}")
@@ -25,6 +24,7 @@ def main():
     parser.add_argument("email",
                         nargs="+", metavar="EMAIL",
                         action="store",
+                        type=str,
                         help="figure it out"
                         )
 
@@ -37,7 +37,7 @@ def main():
     willing = input(f"Are you sure you want to destroy {args.email} y/N: ")
 
     if willing == "y" or willing == "Y":
-        destroy(args.email, fName = "Jack", lName = "Doe")
+        destroy(args.email[0], fName = "Jack", lName = "Doe")
 
 
 if __name__ == "__main__":
