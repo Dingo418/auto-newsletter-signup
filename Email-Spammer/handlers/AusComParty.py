@@ -2,12 +2,13 @@ import requests
 
 def inf():
     return { 
-        "name": "Australian Comunmist Party"
+        "name": "Australian Comunmist Party",
+        "url" : "https://auscp.org.au/"
     }
 
 
 
-def send(email, fName, lName):
+def send(email, fName, lName, phone):
     burp0_url = (
         "https://auscp.org.au:443/wp-json/contact-form-7/v1/contact-forms/55/feedback"
     )
@@ -33,4 +34,4 @@ def send(email, fName, lName):
     }
     burp0_data = f'-----------------------------179962607429440171881674225122\r\nContent-Disposition: form-data; name="_wpcf7"\r\n\r\n55\r\n-----------------------------179962607429440171881674225122\r\nContent-Disposition: form-data; name="_wpcf7_version"\r\n\r\n5.6\r\n-----------------------------179962607429440171881674225122\r\nContent-Disposition: form-data; name="_wpcf7_locale"\r\n\r\nen_US\r\n-----------------------------179962607429440171881674225122\r\nContent-Disposition: form-data; name="_wpcf7_unit_tag"\r\n\r\nwpcf7-f55-p6-o1\r\n-----------------------------179962607429440171881674225122\r\nContent-Disposition: form-data; name="_wpcf7_container_post"\r\n\r\n6\r\n-----------------------------179962607429440171881674225122\r\nContent-Disposition: form-data; name="_wpcf7_posted_data_hash"\r\n\r\n9e2fd9934c2016b165b949119459c0ff\r\n-----------------------------179962607429440171881674225122\r\nContent-Disposition: form-data; name="email-214"\r\n\r\n{email}\r\n-----------------------------179962607429440171881674225122--\r\n'
     res = requests.post(burp0_url, headers=burp0_headers, cookies=burp0_cookies, data=burp0_data)
-    return res.text
+    return res.ok
