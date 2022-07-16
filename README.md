@@ -6,7 +6,7 @@ Python program that auto signs up a given email to a bunch of newsletter service
 #To do
 
 - [x] Get base code working
-- [ ] Get post working(think websites detect spam)
-- [ ] Code in other methods of submitting newsletters
-- [ ] increase size of the database
-- [ ] auto-signuper-v2
+- [] Add more functionality in
+- [] Add more newsletters
+- [] Add colour
+- [] Add phone option

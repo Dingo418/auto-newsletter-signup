@@ -7,6 +7,6 @@ with open("sites.md", "w") as sites_file:
         if file.endswith('.py'):
             website = import_module(f'Email-Spammer.handlers.{file[:-3]}')
             info = website.inf()
-            sites_file.write(f"1.[{info['name']}]({info['url']})\n")
+            sites_file.write(f"1. [{info['name']}]({info['url']})\n")
 
 
