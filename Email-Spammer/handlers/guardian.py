@@ -5,7 +5,7 @@ def inf():
         "url" : "https://www.theguardian.com/"
     }
 
-def send(email, fName, lName, phone):
+def send(email, fName, lName, phone, zip):
     url = "https://mc.us10.list-manage.com/subscribe/form-post-json"
     payload = {
         'u': '7e6df2d1155a77e28a5ba530a',
