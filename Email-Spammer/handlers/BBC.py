@@ -3,7 +3,7 @@ import requests
 def inf():
     return { 
         "name": "BBC",
-        "url" : "https://www.peta.org/"
+        "url" : "https://www.bbc.com/"
     }
 
 
