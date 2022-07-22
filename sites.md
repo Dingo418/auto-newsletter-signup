@@ -1,5 +1,5 @@
 ## List of supported urls
-1. [BBC](https://www.peta.org/)
+1. [BBC](https://www.bbc.com/)
 1. [Australian Communist Party](https://auscp.org.au/)
 1. [Guardian](https://www.theguardian.com/)
 1. [USA Democratic Party](https://democrats.org/)
